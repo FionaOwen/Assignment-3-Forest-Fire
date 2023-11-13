@@ -26,7 +26,7 @@ public class EscapeWindowSpawning: MonoBehaviour
     {
         if(spawnPoints.Length > 0) 
         {
-            int randomIndex = Random.Range(0, 5); //spawnPoints.Length);
+            int randomIndex = Random.Range(0, spawnPoints.Length);
             GameObject spawn = spawnPoints[randomIndex];
             Instantiate(escapeWindowPrefab, spawn.transform.position, spawn.transform.rotation);
         }
