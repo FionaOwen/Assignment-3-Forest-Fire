@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ignite
-  - Vampire
+  - UserVampire
+  - VampireNPC1
   layers:
   - Default
   - TransparentFX

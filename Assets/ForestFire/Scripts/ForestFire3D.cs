@@ -45,6 +45,10 @@ public class ForestFire3D : MonoBehaviour
         PauseGame(true);
         UpdateGridVisuals();
     }
+    public void StartGame()
+    {
+        gameRunning = true;
+    }
 
     // this function controls whether or not to pause the game
     private void PauseGame(bool setGamePause)

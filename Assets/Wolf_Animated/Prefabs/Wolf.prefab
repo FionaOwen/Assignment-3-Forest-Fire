@@ -863,6 +863,8 @@ MonoBehaviour:
   playerGameObject: {fileID: 0}
   werewolfAnimator: {fileID: 9547338}
   minimumChargingDistance: 3
+  chargingSpeed: 2
+  isCharging: 0
 --- !u!1 &176664
 GameObject:
   m_ObjectHideFlags: 0
