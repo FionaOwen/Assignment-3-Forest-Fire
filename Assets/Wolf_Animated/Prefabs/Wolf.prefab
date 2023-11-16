@@ -797,6 +797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 477254}
   - component: {fileID: 9547338}
+  - component: {fileID: -7127952245327217703}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -836,7 +837,7 @@ Animator:
   m_GameObject: {fileID: 175852}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1021c3a1a114cd149aa3d292fe946e87, type: 3}
-  m_Controller: {fileID: 9100000, guid: 637de76f13af2dc48b2b805604d0735a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4207a14823e50e6438f37b401c727159, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -847,6 +848,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7127952245327217703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539b0b637bb62334486e49e14e345744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerGameObject: {fileID: 0}
+  werewolfAnimator: {fileID: 9547338}
+  minimumChargingDistance: 3
 --- !u!1 &176664
 GameObject:
   m_ObjectHideFlags: 0

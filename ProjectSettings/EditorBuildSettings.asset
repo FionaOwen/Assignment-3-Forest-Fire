@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ForestFire/Scenes/ForestFire3D.unity
-    guid: bdfaffa30ba9dc844afffb78261241c8
+    path: Assets/Assignment 3 - Coding/Scenes/VR Vampire vs Werewolves.unity
+    guid: 3d2461476b5e11e4aa690bcb369e012d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: cc9d5552ba6b55642b1f810556cfdcdf,
       type: 2}
