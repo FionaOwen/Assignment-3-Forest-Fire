@@ -332,6 +332,16 @@ PrefabInstance:
       propertyPath: m_SmoothMotionEnabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6443765611106601763, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169631891049266947, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_Name
@@ -375,7 +385,12 @@ PrefabInstance:
     - target: {fileID: 9168142743249570444, guid: 895f6f3c2d334633b5800312285058d2,
         type: 3}
       propertyPath: m_MoveSpeed
-      value: 2
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168142743249570444, guid: 895f6f3c2d334633b5800312285058d2,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -942,7 +957,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266119139}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 137fc5f4224e23441900f7f8bd271783, type: 3}
   m_Name: 
@@ -951,7 +966,6 @@ MonoBehaviour:
   werewolfPrefab: {fileID: 175852, guid: f8243bb353e5cb74481bb26fe62fd298, type: 3}
   lastAnimationNameForTransition: Jump Over
   targetToPlayer: 1
-  initialAnimationToPlay: Slow Run
 --- !u!1 &279806059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2350,7 +2364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171420035}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 137fc5f4224e23441900f7f8bd271783, type: 3}
   m_Name: 
@@ -2359,7 +2373,6 @@ MonoBehaviour:
   werewolfPrefab: {fileID: 175852, guid: f8243bb353e5cb74481bb26fe62fd298, type: 3}
   lastAnimationNameForTransition: Flying Knee Punch Combo
   targetToPlayer: 0
-  initialAnimationToPlay: Running
 --- !u!1 &1185635443
 GameObject:
   m_ObjectHideFlags: 0

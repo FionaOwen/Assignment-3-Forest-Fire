@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class QuitForestFire : MonoBehaviour
 {
+    /// <summary>
+    /// Method to Quit the application.
+    /// </summary>
     public void QuitForestFireapplication()
     {
+        
         Application.Quit();
     }
 }

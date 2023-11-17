@@ -11,8 +11,11 @@ public class WerewolfController : MonoBehaviour
     public float chargingSpeed;
     public bool isCharging;
     public bool targetThePlayer;
+
+
     public void Start()
     {
+        // It sets the initial targetGameObject based on the value of the targetThePlayer variable.
         if (targetThePlayer)
         {
             targetGameObject = GameObject.FindGameObjectWithTag("UserVampire");
@@ -21,15 +24,15 @@ public class WerewolfController : MonoBehaviour
         {
             targetGameObject = GameObject.FindGameObjectWithTag("VampireNPC1");
         }
-
-
     }
-
-
-            
+          
+    
     private void Update()
     {
+        // It calculates the distance between the werewolf and the targetGameObject.
         float distanceToPlayer = Vector3.Distance(transform.position, targetGameObject.transform.position);
+
+        // If the distance to the target is greater than the minimumChargingDistance, start charging.
         if (distanceToPlayer > minimumChargingDistance)
         {
             StartChargeTowardsPlayer();
@@ -37,26 +40,36 @@ public class WerewolfController : MonoBehaviour
         }
         else
         {
+            // If the distance is less than or equal to minimumChargingDistance, stop charging.
             StopCharging();
         }
-
-        // We continuously check the distance between player and wolf 1.
-        // If the distance between player and wolf less than minimumChargingDistance then we will stop charging else the wolf charge towards player.
     }
+
+
     public void StartChargeTowardsPlayer()
-    {   if (!isCharging) 
+    {  
+        // This method is called to start the charging behavior.
+        // If the werewolf is not already charging, it plays the "walk" animation and sets isCharging to true.
+        if (!isCharging) 
         {
             werewolfAnimator.Play("walk");
             isCharging = true;
         }
+        // Calculate the normalized direction vector from the werewolf to the targetGameObject.
         Vector3 position = -(targetGameObject.transform.position - transform.position).normalized;
-        transform.rotation = Quaternion.LookRotation(-position);
-        transform.Translate(position *chargingSpeed* Time.deltaTime);
-        
 
+        // Rotate the werewolf to face the target.
+        transform.rotation = Quaternion.LookRotation(-position);
+
+        // Move the werewolf towards the target using Translate and the specified charging speed.
+        transform.Translate(position *chargingSpeed* Time.deltaTime, Space.World);
     }
+
+
     public void StopCharging()
     {
+        // This method is called to stop the charging behavior.
+        // It plays the "attack1" animation and sets isCharging to false.
         werewolfAnimator.Play("attack1");
         isCharging = false;
     }
