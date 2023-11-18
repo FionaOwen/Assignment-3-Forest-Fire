@@ -8,6 +8,15 @@ public class WolfPunchDetection : MonoBehaviour
     private int numberOfTimesPunched;
     [SerializeField]
     private int maxNumberOfTimesPunched;
+    [SerializeField]
+    private WerewolfController werewolfController;
+
+
+    private void Start()
+    {
+        werewolfController = GetComponent<WerewolfController>();
+    }
+
 
     // This method is called when another collider enters the trigger zone of this GameObject.
     public void OnTriggerEnter(Collider other)
@@ -16,7 +25,7 @@ public class WolfPunchDetection : MonoBehaviour
         if (other.tag == "Hand")
         {
             // Increment the numberOfTimesPunched when the "Hand" enters the trigger zone.
-            numberOfTimesPunched = +1;
+            numberOfTimesPunched = numberOfTimesPunched + 1;
 
             // Output a log message with the current number of times punched.
             Debug.Log("Number of times punched " + numberOfTimesPunched);
@@ -29,8 +38,15 @@ public class WolfPunchDetection : MonoBehaviour
         // Check if the numberOfTimesPunched is greater than the maxNumberOfTimesPunched.
         if (numberOfTimesPunched > maxNumberOfTimesPunched)
         {
+            // Disabling the werewolfcontroller script.
+            werewolfController.enabled = false;
             // If the condition is met, play the "sit" animation using the wolfAnimator.
             wolfAnimator.Play("sit");
         }
+    }
+
+    private void Update()
+    {
+        PunchCheck();
     }
 }

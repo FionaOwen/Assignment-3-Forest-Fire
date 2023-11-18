@@ -56,10 +56,10 @@ public class WerewolfController : MonoBehaviour
             isCharging = true;
         }
         // Calculate the normalized direction vector from the werewolf to the targetGameObject.
-        Vector3 position = -(targetGameObject.transform.position - transform.position).normalized;
+        Vector3 position = (targetGameObject.transform.position - transform.position).normalized;
 
         // Rotate the werewolf to face the target.
-        transform.rotation = Quaternion.LookRotation(-position);
+        transform.rotation = Quaternion.LookRotation(position);
 
         // Move the werewolf towards the target using Translate and the specified charging speed.
         transform.Translate(position *chargingSpeed* Time.deltaTime, Space.World);
